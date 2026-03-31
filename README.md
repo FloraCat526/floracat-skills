@@ -37,7 +37,7 @@ FloraCat 的个人 skills 仓库，用于持续沉淀、整理和复用高价值
 - `shared/assets/`: 跨多个 skill 共用的素材
 - `shared/prompts/`: 可复用 prompt 片段
 - `docs/`: 仓库规范、命名规则、生命周期说明
-- `scripts/`: 后续用于校验、同步、索引的辅助脚本
+- `scripts/`: 仓库级辅助脚本，包括通用 skill 评测入口
 - `archive/`: 已废弃或历史版本
 
 ## 当前 skills
@@ -55,6 +55,24 @@ FloraCat 的个人 skills 仓库，用于持续沉淀、整理和复用高价值
 - 适合对既有 SVG 图进行持续微调
 
 位置：`skills/floracat-architecture-diagram`
+
+## 评测方式
+
+仓库内已经补了一套可复用的 skill 评测脚手架：
+
+- 每个 skill 在自己的 `evals/evals.json` 中维护评测 case
+- 仓库统一用 `scripts/run_skill_eval.py` 执行 baseline / with-skill 对比
+- 结果输出到 `workspaces/<skill-name>/iteration-N/`
+- 评测页自动生成到 `review.html`
+- 评测 viewer 已内置到仓库，不依赖桌面其他目录
+
+示例命令：
+
+```bash
+python3 scripts/run_skill_eval.py floracat-architecture-diagram
+```
+
+更完整说明见：`docs/evaluation.md`
 
 ## 后续演进方向
 

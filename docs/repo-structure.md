@@ -21,7 +21,14 @@
 - `scripts/`
 - `assets/`
 - `prompts/`
+- `evals/`
 - `agents/openai.yaml`
+
+## 评测相关路径
+
+- skill 级 case 配置：`skills/<skill-name>/evals/evals.json`
+- 仓库级执行脚本：`scripts/run_skill_eval.py`
+- 运行结果输出：`workspaces/<skill-name>/iteration-N/`
 
 ## 命名建议
 

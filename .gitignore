@@ -5,3 +5,5 @@ node_modules/
 dist/
 .tmp/
 tmp/
+.claude/
+workspaces/
