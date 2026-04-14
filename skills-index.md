@@ -13,6 +13,8 @@
 | Name | Status | Purpose | Path |
 |------|--------|---------|------|
 | `floracat-architecture-diagram` | `active` | 生成和修改适合演示、公众号、技术分享场景的 HTML/SVG 架构图、流程图、时序图 | `skills/floracat-architecture-diagram` |
+| `floracat-rednote` | `active` | 把原始内容转成适合小红书发布的多图图片流程，完成分析、策略确认、prompt 组装和逐张 PNG 输出 | `skills/floracat-rednote` |
+| `floracat-image-gen` | `active` | 根据 prompt 或 prompt 文件直接输出 PNG，支持 provider、模型、参考图、尺寸比例和批量任务 | `skills/floracat-image-gen` |
 
 ## 登记规则
 

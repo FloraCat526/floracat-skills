@@ -1,8 +1,12 @@
 # floracat-skills
 
-FloraCat 的个人 skills 仓库，用于持续沉淀、整理和复用高价值的 Codex / Claude 类技能。
+FloraCat 的个人 skills 仓库，用来沉淀可复用的工作流型 skill。
 
 这个仓库优先服务于真实工作流中的长期积累：先把 skill 资产结构化沉淀下来，再逐步补充模板、脚本、参考资料和维护规范。
+
+当前主要覆盖小红书图文生成、底层 PNG 图片生成，以及适合技术表达场景的图表与可视化能力。
+
+这个仓库强调从真实工作流中抽象出可重复使用的流程，而不是只保存零散提示词。当前已经支持从内容分析、策略确认、prompt 组装到最终 PNG 输出的一整套小红书图片流程。
 
 ## 这个仓库解决什么问题
 
@@ -55,6 +59,32 @@ FloraCat 的个人 skills 仓库，用于持续沉淀、整理和复用高价值
 - 适合对既有 SVG 图进行持续微调
 
 位置：`skills/floracat-architecture-diagram`
+
+对外发布包：`docs/floracat-architecture-diagram-release-pack.md`
+
+### 2. floracat-rednote
+
+用途：把原始内容转成适合小红书发布的多图图片流程，覆盖分析、策略确认、prompt 组装和最终 PNG 输出。
+
+特点：
+- 先做内容分析，再推荐策略、风格、布局和图片张数
+- 支持 quick confirm、自定义调整、详细模式三段确认流程
+- 输出 `analysis.md`、`outline.md`、`prompts/` 和最终 PNG 图片
+- 系列图默认按首图参考链保持视觉一致性
+
+位置：`skills/floracat-rednote`
+
+### 3. floracat-image-gen
+
+用途：根据 prompt 或 prompt 文件直接输出最终 PNG，作为小红书图文、封面图、插图等工作流的底层出图能力。
+
+特点：
+- 支持 OpenAI、Azure、Google、OpenRouter、DashScope、MiniMax、Jimeng、Seedream、Replicate
+- 支持 `--ref` 参考图、长宽比、尺寸、质量和批量生成
+- 通过 `scripts/main.ts` 直接执行，适合被其他 skill 调用
+- 使用 `.floracat-skills/` 下的偏好配置和 `.env`
+
+位置：`skills/floracat-image-gen`
 
 ## 评测方式
 
