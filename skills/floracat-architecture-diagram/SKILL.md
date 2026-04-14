@@ -42,6 +42,54 @@ Use this skill to produce standalone HTML files with embedded SVG diagrams that 
 - Use subtitle lines for detail; keep them short and scannable.
 - Avoid mixing multiple abstraction levels inside one node.
 - Align sibling nodes rigorously.
+- Treat text fitting as a hard constraint, not a cosmetic preference.
+- Prefer expanding node width or height before reducing font size.
+- Keep explicit inner padding so text never touches the node border.
+- If a label is still too long, split it into multiple lines instead of forcing a single line.
+- Keep title and subtitle blocks vertically separated; do not let subtitle lines crowd the title baseline.
+
+## Text Fitting Guardrails
+
+- Titles should usually fit within 1 to 2 lines.
+- Subtitle/detail text should usually fit within 1 to 3 short lines.
+- If a node needs more than 3 detail lines, simplify the wording or enlarge the node.
+- Use centered `text-anchor="middle"` only when the node is visually symmetric; otherwise use left-aligned text with consistent left padding.
+- For multi-line text, use explicit `tspan` line breaks and check the last line against the bottom padding.
+- Never solve overflow by aggressively shrinking text first. The preferred order is:
+  1. shorten wording
+  2. widen or heighten the node
+  3. split into lines
+  4. only then reduce font size slightly
+
+## Overflow Prevention Procedure
+
+Use this procedure whenever a node contains more than a very short label.
+
+1. Decide the node's usable text width first.
+   - Reserve horizontal padding on both sides before placing any text.
+   - As a default heuristic, keep at least 18 to 24px padding on each side for medium cards.
+2. Estimate whether the label is likely to overflow.
+   - If the text is more than roughly one short phrase in Chinese, assume wrapping will be needed.
+   - If the node title or detail sentence feels visually dense, wrap proactively rather than waiting for collision.
+3. Split long text into semantic chunks, not arbitrary character fragments.
+   - Break at phrase boundaries such as commas, pauses, or logical halves.
+   - Avoid a final orphan line with only a few characters unless the wording makes that unavoidable.
+4. Increase node height to match the wrapped text block.
+   - Add height for every extra line.
+   - Preserve top padding, line spacing, and bottom padding after wrapping.
+5. Re-check surrounding arrows.
+   - A taller node changes routing. After resizing, reroute nearby arrows so they still terminate cleanly on the edge.
+
+## Default Node Text Layout
+
+When there is no better local reason to do otherwise, use this rhythm:
+
+- Title block near the top with clear top padding
+- 8 to 14px vertical gap between title and first detail line
+- Detail lines spaced evenly with explicit `tspan`
+- Bottom padding large enough that the last line does not feel trapped
+
+If a node contains both a title and multiple detail lines, prefer a slightly taller node over a cramped compact node.
 
 ## Arrow Rules
 
@@ -52,6 +100,19 @@ Use this skill to produce standalone HTML files with embedded SVG diagrams that 
 - Use dashed lines only for support, configuration, feedback, optional linkage, or on-demand reads.
 - If arrows are long, shorten or reroute them so the direction remains obvious.
 - Do not let text sit on top of an arrow.
+- Do not let an arrow run through a node body, even briefly.
+- Route arrows around nodes with a clear gap instead of clipping through corners.
+- When an arrow passes near a label, move the label or reroute the arrow; do not rely on luck.
+- Keep arrow stems visually outside the node fill area. The first visible segment should begin at the border, not under the node.
+- If an arrow and a node are close, shorten the arrow and move the marker closer to the target edge instead of drawing a long intrusive line.
+
+## SVG Layering Rules
+
+- Draw large background groups first.
+- Draw arrows beneath nodes whenever possible.
+- Draw node fills and borders above arrows.
+- Draw text above both nodes and arrows.
+- If an arrow must pass behind a node, the node should fully mask the line so no segment appears inside the node body.
 
 ## Editing Rules
 
@@ -59,6 +120,9 @@ Use this skill to produce standalone HTML files with embedded SVG diagrams that 
 - If a user reports overlap, fix geometry directly: move nodes, widen boxes, reroute paths, or adjust text anchors.
 - If a user questions arrow meaning, verify the actual system relationship in code/docs first, then correct the line.
 - Prefer explicit labels over decorative complexity.
+- After every substantial change, do one dedicated pass only for text overflow and node padding.
+- After that, do a separate pass only for arrow routing and line-node collisions.
+- If multiple nodes have long text, standardize the wrapping style across the whole diagram instead of fixing only one offending node.
 
 ## Diagram-Specific Guidance
 

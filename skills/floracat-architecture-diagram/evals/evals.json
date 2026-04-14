@@ -13,7 +13,9 @@
       "expectations": [
         "输出目录中生成 platform-overview.html",
         "HTML 中包含 SVG 架构图",
-        "图中存在中文标签"
+        "图中存在中文标签",
+        "节点文字没有超出边框",
+        "箭头没有穿过节点主体"
       ]
     },
     {
@@ -28,7 +30,9 @@
       "expectations": [
         "输出目录中生成 runtime-sequence.html",
         "HTML 中包含 SVG 时序图",
-        "图中体现需求输入、Agent 执行、工具调用、结果回传"
+        "图中体现需求输入、Agent 执行、工具调用、结果回传",
+        "节点文字没有超出边框",
+        "箭头没有穿过节点主体"
       ]
     },
     {
@@ -43,7 +47,9 @@
       "expectations": [
         "输出目录中生成 agent-patterns-overview.html",
         "HTML 中包含 SVG 总览图",
-        "图中体现 ReAct、Planner-Executor、Router、Multi-Agent 四种模式"
+        "图中体现 ReAct、Planner-Executor、Router、Multi-Agent 四种模式",
+        "节点文字没有超出边框",
+        "箭头没有穿过节点主体"
       ]
     },
     {
@@ -58,7 +64,9 @@
       "expectations": [
         "输出目录中生成 multi-agent-collaboration.html",
         "HTML 中包含 SVG 架构图",
-        "图中体现 Router、Planner、Specialist Agent、工具层、记忆层、结果汇总器"
+        "图中体现 Router、Planner、Specialist Agent、工具层、记忆层、结果汇总器",
+        "节点文字没有超出边框",
+        "箭头没有穿过节点主体"
       ]
     }
   ]
