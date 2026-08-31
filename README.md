@@ -1,3 +1,5 @@
+
+
 # floracat-skills
 
 FloraCat 的个人 skills 仓库，用来沉淀可复用的工作流型 skill。
@@ -93,7 +95,7 @@ FloraCat 的个人 skills 仓库，用来沉淀可复用的工作流型 skill。
 - 每个 skill 在自己的 `evals/evals.json` 中维护评测 case
 - 仓库统一用 `scripts/run_skill_eval.py` 执行 baseline / with-skill 对比
 - 结果输出到 `workspaces/<skill-name>/iteration-N/`
-- 评测页自动生成到 `review.html`
+- 评测页自动生成到 `workspaces/<skill-name>/iteration-N/review.html`
 - 评测 viewer 已内置到仓库，不依赖桌面其他目录
 
 示例命令：
