@@ -1,0 +1,4 @@
+interface:
+  display_name: "FloraCat 公众号封面"
+  short_description: "用小沅 IP 制作场景、标题或架构图式公众号双封面，支持蓝紫与浅黄配色。"
+  default_prompt: "使用 $floracat-wechat-cover 根据我的文章、标题或架构图生成公众号封面：沿用小沅 IP，选择蓝紫色或浅黄色，输出左侧大封面与右侧方形缩略图的组合 PNG，并保留两张独立封面。"

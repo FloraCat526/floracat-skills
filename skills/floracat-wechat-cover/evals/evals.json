@@ -1,0 +1,192 @@
+{
+  "skill_name": "floracat-wechat-cover",
+  "evals": [
+    {
+      "id": 1,
+      "slug": "scene-blue-purple",
+      "prompt": "从下面的文章生成场景化封面：标题《把每周复盘变成可执行的下一步》。正文：我们先回看本周记录，整理反复出现的主题和未完成事项，再选定下周一个重点；文章讲工作方法，没有量化效果数据。让小沅在书桌旁记录、讲解屏幕中的主题和下一步。 配色为 blue-purple。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "assets/references/scene-workspace.png",
+        "assets/references/scene-cafe.png",
+        "assets/references/palette-blue-purple.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "scene-pale-yellow",
+      "prompt": "从下面的文章生成场景化封面：标题《把每周复盘变成可执行的下一步》。正文：我们先回看本周记录，整理反复出现的主题和未完成事项，再选定下周一个重点；文章讲工作方法，没有量化效果数据。让小沅在书桌旁记录、讲解屏幕中的主题和下一步。 配色为 pale-yellow。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "assets/references/scene-workspace.png",
+        "assets/references/scene-cafe.png",
+        "assets/references/title-pale-yellow.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "title-blue-purple",
+      "prompt": "只根据标题《Jev：当 AI 的判断成为工程标准件》生成标题化封面，主图准确保留此标题，小图可按语义提炼短主题。没有提供额外产品数据。 配色为 blue-purple。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "assets/references/title-pale-yellow.png",
+        "assets/references/palette-blue-purple.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "title-pale-yellow",
+      "prompt": "只根据标题《Jev：当 AI 的判断成为工程标准件》生成标题化封面，主图准确保留此标题，小图可按语义提炼短主题。没有提供额外产品数据。 配色为 pale-yellow。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "assets/references/title-pale-yellow.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "architecture-blue-purple",
+      "prompt": "根据输入架构图制作架构图式封面，标题《从请求到结果：Agent 的执行链路》。图中节点和关系是实际依据；不要加入未提供的 Memory 或 Router。 配色为 blue-purple。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "evals/fixtures/agent-flow.svg",
+        "assets/references/architecture-pale-yellow.png",
+        "assets/references/palette-blue-purple.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "architecture-pale-yellow",
+      "prompt": "根据输入架构图制作架构图式封面，标题《从请求到结果：Agent 的执行链路》。图中节点和关系是实际依据；不要加入未提供的 Memory 或 Router。 配色为 pale-yellow。使用提供的小沅 IP，生成左右等高双封面，左侧横版大图、右侧独立重排方形小图。",
+      "expected_output": "交付两张独立 PNG 和左大右小组合 PNG，以及尺寸清单和 brief；人物、文字、输入含义与配色一致。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png",
+        "evals/fixtures/agent-flow.svg",
+        "assets/references/architecture-pale-yellow.png"
+      ],
+      "output_files": [
+        "cover-main.png",
+        "cover-thumbnail.png",
+        "cover-combined.png",
+        "layout.json",
+        "brief.md"
+      ],
+      "expectations": [
+        "主图2130×1000、小图1000×1000、组合图3130×1000，左大右小等高无缝",
+        "人物保持小沅身份；蓝发、棕色大眼和蓝猫白T保持一致",
+        "当前模式与指定配色准确，不植入参考图示例标题或不存在的事实",
+        "小图独立重新排版，在160×160下可识别，不能硬裁主图代替",
+        "标题和中文正确；架构模式节点和方向依据输入，省略细节有记录",
+        "无生成能力时明确报告，不以占位图片或prompt冒充完成"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "thumbnail-edit-preserve-main",
+      "prompt": "我已有一套双封面，本次只更新小封面短标题为“每周复盘”，人物和蓝紫色配色保持。主封面不用改。请说明所需输入并据此修改、重新拼接。若当前未附现有两图，先请求这两个编辑目标，不重新生成主封面。",
+      "expected_output": "识别缺失编辑目标，保留已有主图，仅请求必要文件；不把风格参考当作编辑目标。",
+      "files": [
+        "assets/ip/xiaoyuan-primary.png",
+        "assets/ip/xiaoyuan-chibi.png",
+        "assets/references/layout-double-cover.png"
+      ],
+      "output_files": [],
+      "expectations": [
+        "明确请求当前主图和缩略图，不盲目把示例图当成用户成品",
+        "不重复确认已给定短标题或配色",
+        "现有主图保持；小图修改后需重新组合及核对"
+      ]
+    }
+  ]
+}

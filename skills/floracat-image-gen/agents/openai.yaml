@@ -1,4 +1,0 @@
-interface:
-  display_name: "Image Gen PNG"
-  short_description: "Generate final PNG images with provider, model, and reference-image control."
-  default_prompt: "Use $floracat-image-gen to generate final PNG images from prompts or prompt files, with support for provider selection, reference images, aspect ratio, and batch generation."

@@ -81,4 +81,18 @@ python3 scripts/run_skill_eval.py floracat-architecture-diagram --iteration 2 --
 - benchmark 聚合
 - 多轮平均值与方差分析
 
+## 公众号封面案例与运行能力
+
+`floracat-wechat-cover/evals/evals.json` 包含三种模式 × 两套配色的六个生成场景，以及一个缺少编辑目标时保留主封面的修改场景。输入素材随 skill 提供，架构案例另有确定节点关系的 SVG fixture。
+
+封面生成案例需要运行宿主实际提供图片生成/编辑能力。现有 Claude CLI runner 不会自动接入图片工具；仅创建评测目录或 prompt 不代表已生成封面。在没有该能力的宿主里，应明确记录能力缺失，不能用占位图作为通过结果。案例也可在有图片生成工具的宿主中逐项执行。
+
+新 skill 的确定性拼接检查可独立运行，不需要图片 API：
+
+```bash
+python3 -m unittest discover -s skills/floracat-wechat-cover/scripts -p 'test_*.py' -v
+```
+
+这些测试覆盖尺寸、拼接顺序、等比拟合、真实 PNG 输出和覆盖保护；人物一致性、文字准确性和图中技术关系仍需查看实际生成结果。
+
 后续如果需要，再在这个框架上继续补。

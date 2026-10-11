@@ -1,4 +1,0 @@
-interface:
-  display_name: "RedNote Image Series"
-  short_description: "Plan and generate Xiaohongshu image series from source content."
-  default_prompt: "Use $floracat-rednote to turn my source content into a Xiaohongshu image series with strategy selection, per-page prompts, and final PNG outputs."

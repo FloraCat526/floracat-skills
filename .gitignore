@@ -7,3 +7,5 @@ dist/
 tmp/
 .claude/
 workspaces/
+__pycache__/
+*.pyc
